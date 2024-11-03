@@ -1,0 +1,27 @@
+\doxysection{Grammar.\+h}
+\hypertarget{Grammar_8h_source}{}\label{Grammar_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ GRAMMAR\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ GRAMMAR\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Production.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGrammar}{Grammar}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ std::vector<char>\ \mbox{\hyperlink{classGrammar_ac1f7a1181367eb8692d6ded0e0a1e10c}{terminals}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ std::vector<std::string>\ \mbox{\hyperlink{classGrammar_a7c94dfd651220aefd6670b39d3585c1f}{nonTerminals}};\ \ }
+\DoxyCodeLine{00018\ \ \ std::string\ \mbox{\hyperlink{classGrammar_a5717f32e4456e86245a0eaa02732d958}{startSymbol}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ std::vector<Production>\ \mbox{\hyperlink{classGrammar_a5bde56fb62c39a5d61079c0872147b83}{productions}};\ \ \ \ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00026\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGrammar_a8a2e30a45a84c54ca30eeb8f09dbb3af}{loadFromFile}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00033\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classGrammar_ab2316a421495d3c92984e46dbc81339e}{saveToFile}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ GRAMMAR\_H}}
+
+\end{DoxyCode}

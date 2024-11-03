@@ -1,0 +1,29 @@
+\doxysection{Production.\+h}
+\hypertarget{Production_8h_source}{}\label{Production_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PRODUCTION\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PRODUCTION\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classProduction}{Production}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ std::string\ left;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Lado\ izquierdo\ de\ la\ producción}}
+\DoxyCodeLine{00011\ \ \ std::vector<std::string>\ right;\ \ \textcolor{comment}{//\ Lado\ derecho\ de\ la\ producción}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \textcolor{comment}{//\ Constructor}}
+\DoxyCodeLine{00014\ \ \ \mbox{\hyperlink{classProduction}{Production}}(std::string\ l,\ std::vector<std::string>\ r)}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ :\ left(l),\ right(r)\ \{\}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \textcolor{comment}{//\ Sobrecarga\ del\ operador\ ==}}
+\DoxyCodeLine{00018\ \ \ \textcolor{keywordtype}{bool}\ operator==(\textcolor{keyword}{const}\ \mbox{\hyperlink{classProduction}{Production}}\&\ other)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00019\ \textcolor{keyword}{\ \ }\{}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordflow}{return}\ left\ ==\ other.left\ \&\&\ right\ ==\ other.right;}
+\DoxyCodeLine{00021\ \ \ \}}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ PRODUCTION\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,81 @@
+\doxysection{Referencia de la clase Grammar}
+\hypertarget{classGrammar}{}\label{classGrammar}\index{Grammar@{Grammar}}
+
+
+Representa una gramática libre de contexto con un conjunto de símbolos terminales, no terminales, un símbolo de arranque y un conjunto de producciones.  
+
+
+
+
+{\ttfamily \#include $<$Grammar.\+h$>$}
+
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classGrammar_a8a2e30a45a84c54ca30eeb8f09dbb3af}{load\+From\+File}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Carga una gramática desde un archivo en formato .gra. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGrammar_ab2316a421495d3c92984e46dbc81339e}{save\+To\+File}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Guarda la gramática actual en un archivo en formato .gra. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classGrammar_ac1f7a1181367eb8692d6ded0e0a1e10c}\label{classGrammar_ac1f7a1181367eb8692d6ded0e0a1e10c} 
+std\+::vector$<$ char $>$ {\bfseries terminals}
+\begin{DoxyCompactList}\small\item\em Lista de símbolos terminales. \end{DoxyCompactList}\item 
+\Hypertarget{classGrammar_a7c94dfd651220aefd6670b39d3585c1f}\label{classGrammar_a7c94dfd651220aefd6670b39d3585c1f} 
+std\+::vector$<$ std\+::string $>$ {\bfseries non\+Terminals}
+\begin{DoxyCompactList}\small\item\em Lista de símbolos no terminales. \end{DoxyCompactList}\item 
+\Hypertarget{classGrammar_a5717f32e4456e86245a0eaa02732d958}\label{classGrammar_a5717f32e4456e86245a0eaa02732d958} 
+std\+::string {\bfseries start\+Symbol}
+\begin{DoxyCompactList}\small\item\em Símbolo de arranque de la gramática. \end{DoxyCompactList}\item 
+\Hypertarget{classGrammar_a5bde56fb62c39a5d61079c0872147b83}\label{classGrammar_a5bde56fb62c39a5d61079c0872147b83} 
+std\+::vector$<$ \mbox{\hyperlink{classProduction}{Production}} $>$ {\bfseries productions}
+\begin{DoxyCompactList}\small\item\em Lista de producciones de la gramática. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa una gramática libre de contexto con un conjunto de símbolos terminales, no terminales, un símbolo de arranque y un conjunto de producciones. 
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classGrammar_a8a2e30a45a84c54ca30eeb8f09dbb3af}\label{classGrammar_a8a2e30a45a84c54ca30eeb8f09dbb3af} 
+\index{Grammar@{Grammar}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!Grammar@{Grammar}}
+\doxysubsubsection{\texorpdfstring{loadFromFile()}{loadFromFile()}}
+{\footnotesize\ttfamily bool Grammar\+::load\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Carga una gramática desde un archivo en formato .gra. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em filename} & Nombre del archivo de entrada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si la gramática se carga correctamente, false en caso contrario. 
+\end{DoxyReturn}
+\Hypertarget{classGrammar_ab2316a421495d3c92984e46dbc81339e}\label{classGrammar_ab2316a421495d3c92984e46dbc81339e} 
+\index{Grammar@{Grammar}!saveToFile@{saveToFile}}
+\index{saveToFile@{saveToFile}!Grammar@{Grammar}}
+\doxysubsubsection{\texorpdfstring{saveToFile()}{saveToFile()}}
+{\footnotesize\ttfamily bool Grammar\+::save\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})}
+
+
+
+Guarda la gramática actual en un archivo en formato .gra. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em filename} & Nombre del archivo de salida. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si la gramática se guarda correctamente, false en caso contrario. 
+\end{DoxyReturn}
+
+
+La documentación de esta clase está generada de los siguientes archivos\+:\begin{DoxyCompactItemize}
+\item 
+Grammar.\+h\item 
+Grammar.\+cpp\end{DoxyCompactItemize}

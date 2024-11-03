@@ -1,0 +1,82 @@
+\doxysection{Referencia de la clase Grammar\+Converter}
+\hypertarget{classGrammarConverter}{}\label{classGrammarConverter}\index{GrammarConverter@{GrammarConverter}}
+
+
+Clase para convertir una gramática a Forma Normal de Chomsky (CNF).  
+
+
+
+
+{\ttfamily \#include $<$Grammar\+Converter.\+h$>$}
+
+\doxysubsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGrammarConverter_ac52e972c553090ceb2f8dec61e4e7c3d}{Grammar\+Converter}} (\mbox{\hyperlink{classGrammar}{Grammar}} \&grammar)
+\begin{DoxyCompactList}\small\item\em Constructor de \doxylink{classGrammarConverter}{Grammar\+Converter}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGrammarConverter_a4e55a0032c6f0bdb4201f569b2ab81d3}{convert\+To\+CNF}} ()
+\begin{DoxyCompactList}\small\item\em Realiza la conversión de la gramática a Forma Normal de Chomsky. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGrammarConverter_a1d1eaafddc0a5f255db9fb9fb8c0355e}{remove\+Unit\+Productions}} ()
+\begin{DoxyCompactList}\small\item\em Elimina producciones unitarias de la gramática. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGrammarConverter_aac7ad0484dcea26597d5a24c430f7c19}{remove\+Epsilon\+Productions}} ()
+\begin{DoxyCompactList}\small\item\em Elimina producciones vacías (epsilon) de la gramática. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase para convertir una gramática a Forma Normal de Chomsky (CNF). 
+
+\doxysubsection{Documentación de constructores y destructores}
+\Hypertarget{classGrammarConverter_ac52e972c553090ceb2f8dec61e4e7c3d}\label{classGrammarConverter_ac52e972c553090ceb2f8dec61e4e7c3d} 
+\index{GrammarConverter@{GrammarConverter}!GrammarConverter@{GrammarConverter}}
+\index{GrammarConverter@{GrammarConverter}!GrammarConverter@{GrammarConverter}}
+\doxysubsubsection{\texorpdfstring{GrammarConverter()}{GrammarConverter()}}
+{\footnotesize\ttfamily Grammar\+Converter\+::\+Grammar\+Converter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGrammar}{Grammar}} \&}]{grammar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de \doxylink{classGrammarConverter}{Grammar\+Converter}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em grammar} & Gramática a convertir. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de funciones miembro}
+\Hypertarget{classGrammarConverter_a4e55a0032c6f0bdb4201f569b2ab81d3}\label{classGrammarConverter_a4e55a0032c6f0bdb4201f569b2ab81d3} 
+\index{GrammarConverter@{GrammarConverter}!convertToCNF@{convertToCNF}}
+\index{convertToCNF@{convertToCNF}!GrammarConverter@{GrammarConverter}}
+\doxysubsubsection{\texorpdfstring{convertToCNF()}{convertToCNF()}}
+{\footnotesize\ttfamily void Grammar\+Converter\+::convert\+To\+CNF (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Realiza la conversión de la gramática a Forma Normal de Chomsky. 
+
+Realiza la conversión de la gramática a Forma Normal de Chomsky (CNF). En CNF, cada producción debe ser de la forma A -\/\texorpdfstring{$>$}{>} BC o A -\/\texorpdfstring{$>$}{>} a. \Hypertarget{classGrammarConverter_aac7ad0484dcea26597d5a24c430f7c19}\label{classGrammarConverter_aac7ad0484dcea26597d5a24c430f7c19} 
+\index{GrammarConverter@{GrammarConverter}!removeEpsilonProductions@{removeEpsilonProductions}}
+\index{removeEpsilonProductions@{removeEpsilonProductions}!GrammarConverter@{GrammarConverter}}
+\doxysubsubsection{\texorpdfstring{removeEpsilonProductions()}{removeEpsilonProductions()}}
+{\footnotesize\ttfamily void Grammar\+Converter\+::remove\+Epsilon\+Productions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Elimina producciones vacías (epsilon) de la gramática. 
+
+Elimina las producciones epsilon (vacías) de la gramática. \Hypertarget{classGrammarConverter_a1d1eaafddc0a5f255db9fb9fb8c0355e}\label{classGrammarConverter_a1d1eaafddc0a5f255db9fb9fb8c0355e} 
+\index{GrammarConverter@{GrammarConverter}!removeUnitProductions@{removeUnitProductions}}
+\index{removeUnitProductions@{removeUnitProductions}!GrammarConverter@{GrammarConverter}}
+\doxysubsubsection{\texorpdfstring{removeUnitProductions()}{removeUnitProductions()}}
+{\footnotesize\ttfamily void Grammar\+Converter\+::remove\+Unit\+Productions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Elimina producciones unitarias de la gramática. 
+
+Elimina las producciones unitarias de la gramática. 
+
+La documentación de esta clase está generada de los siguientes archivos\+:\begin{DoxyCompactItemize}
+\item 
+Grammar\+Converter.\+h\item 
+Grammar\+Converter.\+cpp\end{DoxyCompactItemize}
