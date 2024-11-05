@@ -1,0 +1,28 @@
+3
+a
+b
+c
+7
+S
+X
+Y
+Z
+T1
+T2
+T3
+15
+T1 b 
+T2 a 
+T3 c 
+S aXbX 
+S abX 
+S aXb 
+S ab 
+X aY 
+X bY 
+X T1 
+Y aY 
+Y bY 
+Y T2 
+Y T1 
+Y T3 

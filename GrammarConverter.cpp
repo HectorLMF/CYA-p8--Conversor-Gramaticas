@@ -17,6 +17,11 @@ void GrammarConverter::convertToCNF()
 
   int counter = 1;
 
+  removeNonAccesible();
+  removeEpsilonProductions();
+  removeUnitProductions();
+  
+
   for (auto& production : grammar.productions)
   {
     if (production.right.size() == 1)
@@ -58,6 +63,49 @@ void GrammarConverter::convertToCNF()
   }
 
   grammar.productions = newProductions;
+}
+
+void GrammarConverter::removeNonAccesible(){
+
+  std::vector <string> nonAccesibleNonTerminals = grammar.nonTerminals;
+  std::vector <string> accesibleNonTerminals = grammar.nonTerminals;
+
+  for(Production production : grammar.productions){
+    for (std::string right : production.right){
+      for(int i = 0; i < nonAccesibleNonTerminals.size(); i++){
+
+        string current = nonAccesibleNonTerminals[i];
+
+        if (right.find(current) != std::string::npos) {
+          nonAccesibleNonTerminals.erase(nonAccesibleNonTerminals.begin()+i);
+        }
+      }
+    }
+  }
+
+  //MODIFICACION: Imprime no alcanzables desde S
+  cout << "NT no alcanzables desde S: {";
+  for (string ant : accesibleNonTerminals)
+    for (string nt : nonAccesibleNonTerminals){
+
+      bool found = false;
+
+      if(ant != "S" &&  ant == nt ){
+        found = true;
+      }
+      if(found){
+        cout << ant << ", ";
+      }
+    }
+    cout << "}"<< endl;
+
+  for (int i = 0; i < grammar.productions.size(); i++){
+    for(string nonAccesible: nonAccesibleNonTerminals){
+      if(nonAccesible != "S" && nonAccesible == grammar.productions[i].left){
+        grammar.productions.erase(grammar.productions.begin()+i);
+      }
+    }
+  }
 }
 
 /**
@@ -106,9 +154,11 @@ void GrammarConverter::removeUnitProductions()
                             grammar.productions.end());
 }
 
+
 /**
  * @brief Elimina las producciones epsilon (vacías) de la gramática.
  */
+
 void GrammarConverter::removeEpsilonProductions()
 {
   std::set<std::string> nullableSymbols;

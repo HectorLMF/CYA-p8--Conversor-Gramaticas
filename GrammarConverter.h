@@ -5,6 +5,8 @@
 
 #include "Grammar.h"
 
+using namespace std;
+
 /**
  * @brief Clase para convertir una gramática a Forma Normal de Chomsky (CNF).
  */
@@ -22,6 +24,8 @@ class GrammarConverter
    * @brief Realiza la conversión de la gramática a Forma Normal de Chomsky.
    */
   void convertToCNF();
+
+  void removeNonAccesible();
 
   /**
    * @brief Elimina producciones unitarias de la gramática.

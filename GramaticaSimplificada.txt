@@ -14,7 +14,7 @@ S aXb
 S ab
 X aY
 X bY
-X &
+X a
 X b
 Y aY
 Y bY
